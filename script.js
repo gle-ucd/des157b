@@ -8,7 +8,10 @@
     window.addEventListener('load', function(){
         setTimeout(function(){
             instructions.classList.add('fade-out');
-        }, 3000);
+            setTimeout(function(){
+                instructions.style.display = 'none';
+            }, 100)
+        },3000);
     });
 
     // opening hamburger menu
