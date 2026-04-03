@@ -17,13 +17,22 @@
     // opening hamburger menu
     const content = document.querySelector('#content');
     const mobileLine = document.querySelector('#mobile-line');
+    const mobileMenu = document.querySelector('.mobile-menu');
     // hamburger menu turn -> close icon
-    document.querySelector('.mobile-menu').addEventListener('click', toggleMenu);
+    mobileMenu.addEventListener('click', toggleMenu);
     function toggleMenu() {
-        this.classList.toggle("change");
+        mobileMenu.classList.toggle("change");
         content.classList.toggle('open');
         mobileLine.classList.toggle('open');
     }
+
+    window.addEventListener('resize', function(){
+        if (window.innerWidth >= 800) {
+            mobileMenu.classList.remove('change');
+            content.classList.remove('open');
+            mobileLine.classList.remove('open');
+        }
+    });
 
     // opening section lists
     for (let i=1; i<=4; i++) {
@@ -112,13 +121,16 @@
             startY = e.clientY;
             origX = elmnt.offsetLeft;
             origY = elmnt.offsetTop;
+
             document.addEventListener('mousemove', onMouseMove);
             document.addEventListener('mouseup', onMouseUp);
+
             elmnt.style.cursor = 'grabbing';
         }
 
         function onMouseMove(e) {
             if (!dragging) return;
+
             let dx = e.clientX - startX;
             let dy = e.clientY - startY;
 
@@ -137,6 +149,42 @@
             document.removeEventListener('mousemove', onMouseMove);
             document.removeEventListener('mouseup', onMouseUp);
         }
+
+        // touch screen - mobile
+        function onTouchStart(e) {
+            e.preventDefault();
+            dragging = true;
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            origX = elmnt.offsetLeft;
+            origY = elmnt.offsetTop;
+
+            document.addEventListener('touchmove', onTouchMove, {passive: false});
+            document.addEventListener('touchend', onTouchEnd);
+        }
+
+        function onTouchMove(e) {
+            if (!dragging) return;
+
+            e.preventDefault();
+
+            let dx = e.touches[0].clientX - startX;
+            let dy = e.touches[0].clientY - startY;
+
+            let stopperLeft = Math.max(-20, Math.min(window.innerWidth - elmnt.offsetWidth, origX + dx));
+            let stopperTop = Math.max(0, Math.min(window.innerHeight - elmnt.offsetHeight, origY + dy));
+
+            elmnt.style.left = stopperLeft + 'px';
+            elmnt.style.top = stopperTop + 'px';
+        }
+
+        function onTouchEnd() {
+            dragging = false;
+            document.removeEventListener('touchmove', onTouchMove);
+            document.removeEventListener('touchend', onTouchEnd);
+        }
+
+
 
         elmnt.addEventListener('mousedown', onMouseDown);
     }
