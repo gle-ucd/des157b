@@ -9,6 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -18,22 +19,23 @@
     <div id="navigation">
         <label id="switch">
             <input type="checkbox">
-            <span id="slider"></span>
+            <!-- <span id="slider"></span> -->
         </label>
         <div class="mobile-menu">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
+        <div id="mobile-line"></div>
     </div>
 
-    <div id="mobile-overlay">
+    <div id="content">
         <div id="section1">
-            <div>
-                <h2>MiniStudios & Toolkit</h2>
-                <img src="images/arrow.svg" alt="arrow">
+            <div id="s-1">
+                <h2>Mini Studios & Toolkit</h2>
+                <img id="arrow-1" src="images/arrow.svg" alt="arrow">
             </div>
-            <ul>
+            <ul id="s-items-1">
                 <li><a href="#">Blockbuster Video</a></li>
                 <li><a href="#">Check Yourself</a></li>
                 <li><a href="#">Library Liberty</a></li>
@@ -42,11 +44,11 @@
         </div>
 
         <div id="section2">
-            <div>
+            <div id="s-2">
                 <h2>Research</h2>
-                <img src="images/arrow.svg" alt="arrow">
+                <img id="arrow-2" src="images/arrow.svg" alt="arrow">
             </div>
-            <ul>
+            <ul id="s-items-2">
                 <li><a href="#">Brainstorm</a></li>
                 <li><a href="#">Comparative Analysis</a></li>
                 <li><a href="#">Annotated Bibliography</a></li>
@@ -57,11 +59,11 @@
         </div>
 
         <div id="section3">
-            <div>
-                <h2>Developement</h2>
-                <img src="images/arrow.svg" alt="arrow">
+            <div id="s-3">
+                <h2>Development</h2>
+                <img id="arrow-3" src="images/arrow.svg" alt="arrow">
             </div>
-            <ul>
+            <ul id="s-items-3">
                 <li><a href="#">Proposal</a></li>
                 <li><a href="#">Sketches</a></li>
                 <li><a href="#">User Flows</a></li>
@@ -74,22 +76,21 @@
         </div>
 
         <div id="section4">
-            <div>
+            <div id="s-4">
                 <h2>Capstone</h2>
-                <img src="images/arrow.svg" alt="arrow">
+                <img id="arrow-4" src="images/arrow.svg" alt="arrow">
             </div>
-            <ul>
+            <ul id="s-items-4">
                 <li><a href="#">Case Study</a></li>
                 <li><a href="#">Project</a></li>
             </ul>
         </div>
     </div>
     
-
     <div id="mask">
         <div id="banner">
-            <h1>Giang Le</h1>
-            <h3>DES 157B &ndash; Interactive Media III &ndash; Spring 2026</h3>
+            <h1 data-text="Giang Le">Giang Le</h1>
+            <h3 data-text="DES 157B &ndash; Interactive Media III &ndash; Spring 2026">DES 157B &ndash; Interactive Media III &ndash; Spring 2026</h3>
         </div>
     </div>
 </body>
