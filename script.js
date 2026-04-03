@@ -66,16 +66,18 @@
                 line.style.backgroundColor = '#666444';
             })
 
-            for (let i=1; i<=4 ; i++){
-                const sectionContent = document.querySelector(`#section${i}`);
-                sectionContent.style.backgroundColor = '#ececece0';
+            if (window.innerWidth >= 800) {
+                for (let i=1; i<=4 ; i++){
+                    const sectionContent = document.querySelector(`#section${i}`);
+                    sectionContent.style.backgroundColor = '#ececece0';
+                }
+                headingContent.forEach(function(h){
+                    h.style.color = '#666444';
+                })
+                aContent.forEach(function(a){
+                    a.style.color = '#666444';
+                })
             }
-            headingContent.forEach(function(h){
-                h.style.color = '#666444';
-            })
-            aContent.forEach(function(a){
-                a.style.color = '#666444';
-            })
 
             console.log('switch ON, dark mode on')
         } else {
@@ -86,16 +88,18 @@
                 line.style.backgroundColor = '#ECECEC';
             })
 
-            for (let i=1; i<=4 ; i++){
-                const sectionContent = document.querySelector(`#section${i}`);
-                sectionContent.style.backgroundColor = '#666444d0';
+            if (window.innerWidth >= 800){
+                for (let i=1; i<=4 ; i++){
+                    const sectionContent = document.querySelector(`#section${i}`);
+                    sectionContent.style.backgroundColor = '#666444d0';
+                }
+                headingContent.forEach(function(h){
+                    h.style.color = '#ECECEC';
+                })
+                aContent.forEach(function(a){
+                    a.style.color = '#ECECEC';
+                })
             }
-            headingContent.forEach(function(h){
-                h.style.color = '#ECECEC';
-            })
-            aContent.forEach(function(a){
-                a.style.color = '#ECECEC';
-            })
 
             console.log('switch OFF, dark mode off')
         }
