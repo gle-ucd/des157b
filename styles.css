@@ -14,7 +14,7 @@ body {
     background-position: center;
 }
 
-h1, h2, h3, a {
+h1, h2, a, p {
     font-family: "Squada One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -45,13 +45,13 @@ h2 {
     margin-bottom: 30px;
 }
 
-h3 {
+p {
     font-size: 1em;
     color: #ECECEC;
     position: relative;
 }
 
-h3::before {
+p::before {
   content: attr(data-text);
   position: absolute;
   left: 0;
@@ -313,13 +313,13 @@ input:checked::after {
         margin: 0 auto;
     }
 
-    h3 {
+    p {
         font-size: 1.5em;
         margin: 0;
     }
 
-    h3::before {
-        -webkit-text-stroke: 16px #666444;
+    p::before {
+        -webkit-text-stroke: 12px #666444;
     }
 
     a {
