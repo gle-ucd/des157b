@@ -6,7 +6,7 @@
 
 body {
     position: relative;
-    background-color: red;
+    background-color: #666444;
     background-image: url('images/light-bg.png');
     background-size: auto 100vh;
     /* background-attachment: fixed; */
@@ -275,6 +275,29 @@ input:checked::after {
     z-index: -20;
     border-radius: inherit; 
 }
+
+/* ------------- instruction notification -------------*/
+#instructions {
+    position: absolute;
+    z-index: 50;
+    top: 45%;
+    right: 20%;
+
+    animation: animate 1.5s ease-in-out infinite;
+
+    transition: opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+@keyframes animate {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(5px);}
+    100% {transform: translateY(0);}
+}
+
 
 @media screen and (min-width: 800px) {
     h1 {

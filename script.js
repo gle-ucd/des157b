@@ -2,6 +2,15 @@
     'use strict';
     console.log('reading js');
 
+    // instructions timing
+    const instructions = document.querySelector('#instructions');
+
+    window.addEventListener('load', function(){
+        setTimeout(function(){
+            instructions.classList.add('fade-out');
+        }, 3000);
+    });
+
     // opening hamburger menu
     const content = document.querySelector('#content');
     const mobileLine = document.querySelector('#mobile-line');
