@@ -185,7 +185,7 @@
         }
 
 
-
+        elmnt.addEventListener('touchstart', onTouchStart, { passive: false });
         elmnt.addEventListener('mousedown', onMouseDown);
     }
 
