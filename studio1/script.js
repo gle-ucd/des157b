@@ -29,7 +29,7 @@
     const line12 = document.querySelector('#line12');
 
     const poem = {
-        start: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+        start: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25],
         lines: [line1, line2, line3, line4, line5, line6, line7, line8, line9, line10, line11, line12]
     }
 
@@ -55,7 +55,7 @@
 
     function checkTime() {
         const elapsedTime = (Date.now() - startTime) / 1000;
-        console.log(elapsedTime);
+        // console.log(elapsedTime);
         
         for (let i = 0; i < poem.start.length; i++) {
             if (elapsedTime >= poem.start[i]) {
@@ -76,7 +76,7 @@
                 const endSize = mediaElements.endSize[j];
                 const size = startSize - (progress * (startSize - endSize));
                 mediaElements.mask[j].style.maskSize = size + "%";
-                mediaElements.container[j].style.background = 'transparent';
+                // mediaElements.container[j].style.background = 'transparent';
 
                 const grayscale = localTime * 100;
                 mediaElements.media[j].style.filter = `grayscale(${grayscale}%)`;

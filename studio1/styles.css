@@ -6,6 +6,9 @@ body {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    /* overflow-y: hidden; */
+    /* max-width: 1200px;
+    margin: 0 auto; */
 }
 
 #media1-container, #media2-container, #media3-container, #media4-container {
@@ -15,50 +18,54 @@ body {
 }
 
 #media1-container {
-    width: 55%;
+    width: 90%;
     aspect-ratio: 15/11;
     transform: rotate(10deg);
-    bottom: 5%;
+    bottom: -2%;
     left: -1%;
     z-index: 10;
-    background: url('images/media1.png');
+    /* background: url('images/media1.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    max-width: 1652px;
 }
 
 #media2-container {
-    width: 50%;
+    width: 70%;
     aspect-ratio: 13/8;
     right: -8%;
-    bottom: 5%;
+    bottom: 30%;
     transform: rotate(-2deg);
     z-index: 2;
-    background: url('images/media2.png');
+    /* background: url('images/media2.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    max-width: 1200px;
 }
 
 #media3-container {
-    width: 19%;
+    width: 35%;
     aspect-ratio: 12/16;
-    top: -1%;
-    right: 30%;
+    top: 5%;
+    right: 70%;
     transform: rotate(-5deg);
     z-index: 3;
-    background: url('images/media3.png');
+    /* background: url('images/media3.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    max-width: 570px;
 }
 
 #media4-container {
-    width: 40%;
+    width: 80%;
     aspect-ratio: 16/9;
-    top: -5%;
+    top: -3%;
     right: -15%;
     transform: rotate(7deg);
-    background: url('images/media4.png');
+    max-width: 1500px;
+    /* background: url('images/media4.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 #media1, #media2, #media3, #media4 {
@@ -71,7 +78,6 @@ body {
 
 /* video[poster] {
   width: 100%;
-  aspect-ratio: 13/8;
   object-fit: cover;
 } */
 
@@ -82,7 +88,7 @@ body {
     height: 100%;
     mask-repeat: no-repeat;
     mask-position: center;
-    border: 10px solid rgb(255, 231, 231);
+    border: 10px solid rgb(254, 237, 222);
     box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.75);
 }
 
@@ -119,15 +125,19 @@ body {
 
 #poem {
     z-index: 20;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 800px;
 }
 
-.line, #line12 {
+.line {
     position: absolute;
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
     font-style: italic;
     padding: 15px 20px;
-    color:rgb(255, 231, 231);
+    color:rgb(254, 237, 222);
     font-size: 1em;
     background-color: rgba(0, 0, 0, 0.75);
     width: fit-content;
@@ -190,8 +200,8 @@ body {
 }
 
 #line12 {
-    bottom: 10px;
-    text-shadow: 0px 0px 6px #000000;
+    top: 651px;
+    text-shadow: 0px 0px 20px #000000;
     background-color: transparent;
     left: 25%;
 }
@@ -203,5 +213,29 @@ body {
 
     #line12 {
         font-size: 1.2em;
+    }
+
+    #media1-container {
+        width: 55%;
+        bottom: 5%;
+        left: -1%;
+    }
+
+    #media2-container {
+        width: 50%;
+        right: -8%;
+        bottom: 5%;
+    }
+
+    #media3-container {
+        width: 19%;
+        top: -1%;
+        right: 30%;
+    }
+
+    #media4-container {
+        width: 40%;
+        top: -5%;
+        right: -15%;
     }
 }
