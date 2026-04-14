@@ -63,6 +63,8 @@
         ]
     }
 
+    const loader = document.querySelector('#loading');
+
     const startTime = Date.now();
     const intervalID = setInterval(checkTime, 100);
 
