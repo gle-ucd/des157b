@@ -47,9 +47,9 @@
     }
 
     const mediaElements = {
-        speed: [0.3, 0.4, 0.32, 0.25],
+        speed: [0.4, 0.4, 0.32, 0.25],
         startTime:   [0, 5, 6, 4],
-        startSize: [300, 300, 170, 140],
+        startSize: [200, 300, 170, 140],
         endSize: [95, 80, 80, 100],
         media: [media1, media2, media3, media4],
         mask: [media1Mask, media2Mask, media3Mask, media4Mask],
@@ -63,10 +63,29 @@
         ]
     }
 
+    // loading all videos before starting the timer and function
     const loader = document.querySelector('#loading');
+    const allVideos = [media1, media2, media3, media4];
+    let videosLoaded = 0;
+    let canPlay = false;
+
+    allVideos.forEach(function(video){
+        video.addEventListener('canplaythrough', function(){
+            videosLoaded++;
+            if (videosLoaded === allVideos.length) {
+                canPlay = true;
+                loader.style.display = 'none';
+
+                const intervalID = setInterval(checkTime, 100);
+            }
+        });
+    })
+
+    // if (canPlay === true) {
+        
+    // }
 
     const startTime = Date.now();
-    const intervalID = setInterval(checkTime, 100);
 
     function checkTime() {
         const elapsedTime = (Date.now() - startTime) / 1000;
