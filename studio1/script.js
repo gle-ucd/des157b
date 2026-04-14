@@ -2,6 +2,19 @@
     'use strict';
     console.log('reading js - studio 1');
 
+
+    const fs = document.querySelector('#expand');     
+
+        fs.addEventListener('click', function() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+            fs.innerHTML = '<i class="fa-solid fa-compress"></i>'
+        } else {
+            document.exitFullscreen();
+            fs.innerHTML = '<i class="fas fa-expand"></i>'
+        }
+    })
+
     const media1 = document.querySelector('#media1');
     const media2 = document.querySelector('#media2');
     const media3 = document.querySelector('#media3');
