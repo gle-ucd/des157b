@@ -1,0 +1,62 @@
+[
+  {
+    "date": "11/23/25",
+    "volume_g": 10.156,
+    "price_per_g": 4.099,
+    "total_price": 41.63
+  },
+  {
+    "date": "12/12/25",
+    "volume_g": 11.164,
+    "price_per_g": 3.899,
+    "total_price": 43.53
+  },
+  {
+    "date": "12/22/25",
+    "volume_g": 6.604,
+    "price_per_g": 3.799,
+    "total_price": 25.09
+  },
+  {
+    "date": "01/10/26",
+    "volume_g": 5.061,
+    "price_per_g": 4.034,
+    "total_price": 20.42
+  },
+  {
+    "date": "01/25/26",
+    "volume_g": 10.85,
+    "price_per_g": 3.978,
+    "total_price": 43.16
+  },
+  {
+    "date": "02/14/26",
+    "volume_g": 8.49,
+    "price_per_g": 4.159,
+    "total_price": 35.31
+  },
+  {
+    "date": "02/28/26",
+    "volume_g": 9.968,
+    "price_per_g": 4.199,
+    "total_price": 41.86
+  },
+  {
+    "date": "03/07/26",
+    "volume_g": 5.388,
+    "price_per_g": 4.339,
+    "total_price": 23.38
+  },
+  {
+    "date": "03/28/26",
+    "volume_g": 4.475,
+    "price_per_g": 5.149,
+    "total_price": 23.04
+  },
+  {
+    "date": "04/12/26",
+    "volume_g": 3.532,
+    "price_per_g": 5.159,
+    "total_price": 18.22
+  }
+]

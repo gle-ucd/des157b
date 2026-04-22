@@ -1,0 +1,271 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    background-image: url("images/html-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+body {
+    background-image: url('images/bg.jpg');
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+    max-width: 1200px;
+}
+
+main {
+    max-width: 1135px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    /* top: 0; */
+}
+
+header img:first-child {
+    width: 80%;
+    height: auto;
+    max-width: 447px;
+}
+
+#summary-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#summary-btn img {
+    width: 100%;
+    height: auto;
+    max-width: 117px;
+}
+
+#nav-and-gauge {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding-top: 130px;
+}
+
+#process-and-gauge {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+}
+
+#progress {
+    margin-bottom: -15px;
+}
+
+#nav {
+    width: 261px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#next-btn {
+    transform: scaleX(-1);
+}
+
+#prev-btn, #next-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    max-width: 50px;
+}
+
+#big-gauge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gauge {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.gauge img:first-child {
+    width: 100%;
+    height: auto;
+    /* min-width: 180px; */
+}
+
+#volume-gauge {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+}
+
+#volume-gauge .needle {
+    width: 6%;
+    max-width: 12px;
+}
+
+.gauge-label {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6875em;
+    color: #BEBEBE;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.needle {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(0);
+    width: 5%;
+    max-width: 18px;
+    height: auto;
+    transform-origin: 50% 98%;
+}
+
+#volume-needle {
+    bottom: 40px;
+}
+
+.car-icon {
+    display: none;
+}
+
+#date {
+    font-size: 1em;
+    color: #670000;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    background-color: #B46161;
+    border-radius: 5px;
+    padding: 5px 8px;
+    max-width: 200px;
+    text-align: center;
+    margin: 10px auto 0 auto;
+}
+
+@media screen and (min-width: 570px) {
+    header {
+        width: 100%;
+        justify-content: space-between;
+        top: 10px;
+        left: -40px;
+    }
+
+    header img:first-child {
+        transform: rotate(-5deg);
+    }
+
+}
+
+@media screen and (min-width: 1140px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        background-image: url('images/main-bg.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        aspect-ratio: 1182/476;
+        /* margin-top: 20%; */
+    }
+
+    header {
+        top: 50px;
+    }
+
+    header img:first-child {
+        transform: rotate(-16deg);
+    }
+
+    #nav-and-gauge {
+        margin-top: 55px;
+    }
+
+    #big-gauge {
+        margin-top: -70px;
+        gap: 90px;
+        flex-direction: row;
+    }
+
+    .gauge {
+        max-width: 412px;
+    }
+
+    #volume-gauge {
+        max-width: 189px;
+    }
+
+    /* #big-gauge {
+        flex-direction: row;
+        margin-top: -10px;
+        gap: 30px;
+    } */
+
+    #nav-and-gauge {
+        padding-top: 0;
+        margin-top: 55px;
+    }
+
+    #lower-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 90px;
+        max-width: 800px;
+        margin: 5px auto 0 auto;
+    }
+
+    #lower-section div {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .car-icon {
+        display: block;
+    }
+
+    #date {
+        margin: 0;
+    }
+
+}
+
+
+
+

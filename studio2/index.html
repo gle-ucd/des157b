@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio 2</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <img src="images/sticker-title.png" alt="heading sticker"> 
+        <button  id="summary-btn">
+            <img src="images/sticker-summary-data.png" alt="flower sticker">
+        </button>
+    </header>
+
+    <main>
+        <div id="nav-and-gauge">
+            <div id="nav">
+                <button id="prev-btn">
+                    <img src="images/arrow.svg" alt="left arrow">
+                </button>
+                <button id="next-btn">
+                    <img src="images/arrow.svg" alt="right arrow">
+                </button>
+            </div>
+
+            <div id="process-and-gauge">
+                <div id="progress">
+                    <img src="images/progress-1.svg" alt="progress bar">
+                </div>
+
+                <div id="volume-gauge" class="gauge">
+                    <img src="images/gauge-volume.svg" alt="gauge for volume">
+                    <img class='needle' id="volume-needle" src="images/needle-small.svg" alt="needle for volume gauge">  
+                </div>
+            </div>
+        </div>
+
+        <div id="big-gauge">
+            <div id="total-price-gauge" class="gauge">
+                <img src="images/gauge-total-price.svg" alt="gauge for total price">
+                <p class="gauge-label">Total Price ($)</p>
+                <img class='needle' id="total-price-needle" src="images/needle-large.svg" alt="needle for total price gauge">
+            </div>
+            <div id="price-gallon-gauge" class="gauge">
+                <img src="images/gauge-price-gallon.svg" alt="gauge for price per gallon">
+                <p class="gauge-label">$/Gallon</p>
+                <img class='needle' id="price-gallon-needle" src="images/needle-large.svg" alt="needle for price per gallon gauge">
+            </div>
+        </div>
+
+        <div id="lower-section">
+            <div>
+                <img src="images/car-icon-1.svg" alt="car icon" class="car-icon">
+                <img src="images/car-icon-2.svg" alt="car icon" class="car-icon">
+                <p id="date">00/00/0000</p>
+            </div>
+
+            <div>
+                <img src="images/car-icon-3.svg" alt="car icon" class="car-icon">
+                <img src="images/car-icon-4.svg" alt="car icon" class="car-icon">
+                <img src="images/car-icon-5.svg" alt="car icon" class="car-icon">
+                <img src="images/car-icon-6.svg" alt="car icon" class="car-icon">
+            </div>
+        </div>
+        
+    </main>
+    
+
+</body>
+</html>
