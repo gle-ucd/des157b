@@ -43,22 +43,25 @@
                 </div>
 
                 <div id="volume-gauge" class="gauge">
-                    <img src="images/gauge-volume.svg" alt="gauge for volume">
+                    <img src="images/gauge-volume.svg" alt="gauge for volume" class="gauge-bg">
                     <img class='needle' id="volume-needle" src="images/needle-small.svg" alt="needle for volume gauge">  
+                    <span id="volume-overlay">----</span>
                 </div>
             </div>
         </div>
 
         <div id="big-gauge">
             <div id="total-price-gauge" class="gauge">
-                <img src="images/gauge-total-price.svg" alt="gauge for total price">
+                <img src="images/gauge-total-price.svg" alt="gauge for total price" class="gauge-bg">
                 <p class="gauge-label">Total Price ($)</p>
                 <img class='needle' id="total-price-needle" src="images/needle-large.svg" alt="needle for total price gauge">
+                <span id="total-price-overlay">----</span>
             </div>
             <div id="price-gallon-gauge" class="gauge">
-                <img src="images/gauge-price-gallon.svg" alt="gauge for price per gallon">
+                <img src="images/gauge-price-gallon.svg" alt="gauge for price per gallon" class="gauge-bg">
                 <p class="gauge-label">$/Gallon</p>
                 <img class='needle' id="price-gallon-needle" src="images/needle-large.svg" alt="needle for price per gallon gauge">
+                <span id="price-gallon-overlay">----</span>
             </div>
         </div>
 
@@ -76,8 +79,30 @@
                 <img src="images/car-icon-6.svg" alt="car icon" class="car-icon">
             </div>
         </div>
-        
     </main>
+
+    <div id="summary-overlay">
+        <div id="summary-data">
+                <img src="images/close-icon.png" id="close" alt="close icon">
+                <h1>What does this data mean?</h1>
+
+                <h2>In general...</h2>
+                <div>
+                    <img src="images/Chart-PricePerGallonTime.png" alt="chart of price per gallon over time">
+                    <div>
+                        <p>There's an increase in fuel costs over time. There's a noticeable rise after March that can be linked to rising geopolitical conflicts in the Middle East.</p>
+                        <p>Although there is a clear trend upward, looking at the data in this broader context of a chart, the increase seems less dramatic than it may feel in the moment. This is especially true as gas prices spiking is a normal part of the economic cycle.</p>
+                    </div>
+                </div>
+
+                <h2>For me...</h2>
+                <div>
+                    <img src="images/Chart-PriceGallonVSFuelConsumptionTime.png" alt="chart of price per gallon versus fuel consumption over time">
+                    <img src="images/Chart-PriceGallonVSFuelConsumption.png" alt="chart of price per gallon versus fuel consumption">
+                </div>
+                <p>Without context of my lifestyle, it may appear that I spend less on gas when prices increase. While there may be a psychological factor influencing my spending behavior, it is more likely that the decrease is due to the reduced need to drive during certain times. As November 2025 to December 2025 was closer to the end of the year, I was driving more frequently, especially due to Winter Break in December. The same idea can be applied to the higher spending on the other months; this variety in spending can be better explained by my habits rather than interpreting the charts alone.</p>
+            </div>
+    </div>
     
 
 </body>

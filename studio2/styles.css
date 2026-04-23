@@ -10,7 +10,8 @@ html {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100dvh;
+    background-attachment: scroll;
 }
 
 body {
@@ -34,6 +35,7 @@ main {
 header {
     position: absolute;
     display: flex;
+    z-index: 10;
     /* top: 0; */
 }
 
@@ -44,16 +46,24 @@ header img:first-child {
 }
 
 #summary-btn {
-    background: transparent;
+    background: none;
     border: none;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 
 #summary-btn img {
     width: 100%;
     height: auto;
     max-width: 117px;
+    display: block;
+    transition: filter 0.2s ease;
+}
+
+#summary-btn:hover img {
+    filter: drop-shadow(0 0 6px rgb(223, 91, 91));
+    transform: scale(1.08) rotate(-2deg);
 }
 
 #nav-and-gauge {
@@ -121,6 +131,58 @@ header img:first-child {
     width: 100%;
     max-width: 170px;
     height: auto;
+    position: relative;
+}
+
+#total-price-gauge, #price-gallon-gauge {
+    position: relative;
+}
+
+.gauge-bg {
+    transition: filter 0.1s ease;
+    cursor: pointer;
+}
+
+.gauge-bg:hover {
+    filter: drop-shadow(0 0 8px rgb(220, 41, 41));
+}
+
+span {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background-color:#B46161;
+    border: 2px solid #BEBEBE;
+    border-radius: 5px;
+    display: none;
+    pointer-events: none;
+    z-index: 1;
+
+    color: #670000;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 0.6875em;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 0.9em;
+}
+
+span.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#volume-overlay {
+    top: 10px;
+    right: -70px;
+}
+
+#price-gallon-overlay, #total-price-overlay {
+    top: 10px;
+    right: -40px;
 }
 
 #volume-gauge .needle {
@@ -144,11 +206,13 @@ header img:first-child {
     position: absolute;
     bottom: 15px;
     left: 50%;
-    transform: translateX(-50%) rotate(0);
+    /* transform: translateX(-50%) rotate(0deg); */
     width: 5%;
     max-width: 18px;
     height: auto;
     transform-origin: 50% 98%;
+    transition: transform 0.4s ease;
+    z-index: 10;
 }
 
 #volume-needle {
@@ -168,9 +232,62 @@ header img:first-child {
     background-color: #B46161;
     border-radius: 5px;
     padding: 5px 8px;
-    max-width: 200px;
+    width: 200px;
     text-align: center;
     margin: 10px auto 0 auto;
+}
+
+#summary-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#summary-overlay.active {
+    display: flex;
+    justify-content: center;
+}
+
+#summary-data {
+    position: relative;
+    z-index: 1000;
+    padding: 20px;
+    max-width: 905px;
+    background-color: #BEBEBE;
+    overflow: auto;
+}
+
+#close{
+    float: right;
+}
+
+#summary-data p {
+    font-size: 1em;
+    color: #670000;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #670000;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 1.25em;
+    color: #670000;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    margin-top: 50px;
 }
 
 @media screen and (min-width: 570px) {
@@ -262,6 +379,33 @@ header img:first-child {
 
     #date {
         margin: 0;
+        width: 110px;
+    }
+
+    #price-gallon-overlay, #total-price-overlay {
+        right: -10px;
+    }
+
+    #summary-data {
+        height: 600px;
+        margin: auto;
+        border-radius: 5px;
+    }
+
+    #summary-data > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #summary-data div div {
+        max-width: 440px;
+    }
+
+    #summary-data div img {
+        width: 100%;
+        max-width: 440px;
+        height: auto;
+        display: block;
     }
 
 }
