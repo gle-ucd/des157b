@@ -27,7 +27,7 @@ body {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 main {
@@ -42,6 +42,7 @@ header {
     z-index: 10;
     top: 10px;
     /* top: 0; */
+    pointer-events: none;
 }
 
 header img:first-child {
@@ -56,6 +57,7 @@ header img:first-child {
     padding: 0;
     margin: 0;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 #summary-btn img {
@@ -295,7 +297,17 @@ h2 {
     margin-top: 50px;
 }
 
+@media screen and (min-width: 380px) {
+    body {
+        align-items: center;
+    }
+}
+
 @media screen and (min-width: 570px) {
+    /* body {
+        align-items: center;
+    } */
+
     header {
         width: 100%;
         justify-content: space-between;
@@ -310,12 +322,6 @@ h2 {
 }
 
 @media screen and (min-width: 1140px) {
-    /* body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
-
     main {
         background-image: url('images/main-bg.svg');
         background-repeat: no-repeat;
