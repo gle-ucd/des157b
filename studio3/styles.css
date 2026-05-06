@@ -1,0 +1,269 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    background-color: #EAEAEA;
+    overflow: hidden;
+    padding: 8px;
+}
+
+footer {
+    background-color: #EAEAEA80;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+footer a {
+    text-decoration: none;
+    color: #3F3F3F;
+    font-family: "Sarpanch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+    font-size: 0.75em;
+
+}
+
+/* content section */
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    display: flex;
+}
+
+#left {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left img {
+    width: 198.03px;
+}
+
+#right {
+    display: inline-flex; 
+}
+
+#right > div {
+   display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+#egg-wrapper {
+    position: relative;
+}
+
+#egg-wrapper img {
+    position: absolute;
+    top: -23px;
+    right: 5px;
+    width: 59.8px;
+}
+
+p {
+    margin: 0;
+}
+
+.word {
+    font-family: "Sarpanch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #3F3F3F;
+    line-height: 1;
+}
+
+.word1 {
+    font-weight: 800;
+    font-size: 4.375em;
+    display: inline-block;
+}
+
+.word2 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+
+.word3 {
+    font-size: 5.375em;
+    line-height: 0.5;
+}
+
+.word4 {
+    font-size: 7.375em;
+    color: #8B8B8B;
+    transform: translateY(13px);
+}
+
+.time-word {
+    font-size: 1.5em;
+}
+
+#timer-wrapper {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#timer-numbers {
+    font-size: 6em;
+    color: #8B8B8B;
+    background-color: #D4D4D4;
+    font-family: "Sarpanch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-btn {
+    display: flex;
+    gap: 15px;
+}
+
+#divider {
+    width: 4px;
+    height: 40px;
+    background-color: #3F3F3F;
+}
+
+button {
+    font-size: 1.6em;
+    font-family: "Sarpanch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#start {
+    background-color: #A9DD6F;
+}
+
+#stop {
+    background-color: #EAADA5;
+}
+
+#restart {
+    background-color: #8B8B8B;
+    color: #D4D4D4;
+}
+
+/* egg section */
+#egg-section {
+    position: relative;
+    height: 100%;
+    margin-top: 80px;
+}
+
+#pan {
+    position: absolute;
+    left: -90%;
+    top: -20%;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+#egg {
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+    max-width: 367px;
+    /* width: 60%; */
+}
+
+
+/* animations */
+@keyframes blink {
+    50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+    animation: blink 1s step-start infinite;
+}
+
+@media screen and (min-width: 500px) {
+    button {
+        font-size: 1.8em;
+    }
+
+    #pan {
+        left: -50%;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    html {
+        overflow: visible;
+    }
+
+    #pan {
+        top: -20%;
+        left: -30%;
+    }
+
+    #egg-container {
+        /* margin-top: 50px;
+        margin-left: 30px; */
+        transform: translate(30px, 50px);
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    body {
+        display: flex;
+        justify-content: space-evenly;
+        height: 100vh;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #content {
+        gap: 100px;
+        order: 2;
+    }
+
+    #egg-section {
+        order: 1;
+        margin: 0;
+    }
+
+    #egg-container {
+        transform: translate(-150px, 200px);
+    }
+
+    #pan {
+        left: -130%;
+        top: 10%;
+    }
+}
