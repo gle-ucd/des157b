@@ -1,0 +1,32 @@
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #ECECEC;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, p {
+    font-family: "Courier Prime", monospace;
+    font-style: normal;
+    color: #1d1c1c;
+}
+
+h1 {
+    font-size: 2.25em;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+}
