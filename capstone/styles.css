@@ -63,3 +63,7 @@ img {
     height: auto;
     display: block;
 }
+
+div {
+    margin-top: 50px;
+}
